@@ -13,7 +13,7 @@ app = typer.Typer(name="tjek", add_completion=False, help="Tjek helps you unders
 @app.command()
 def version():
     """Gives the version of the app"""
-    typer.echo(f"0.0.1")
+    typer.echo(f"0.1.0")
 
 
 @app.command()
