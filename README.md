@@ -1,3 +1,5 @@
+<img src="icon.svg" width=125 height=125 align="right">
+
 # tjek
 
 > tjek changes with the main branch
@@ -14,7 +16,12 @@
 python -m pip install tjek
 ```
 
-## Documentation
+## Quickstart 
+
+This app is useful when you want to limit certain CI steps based
+on which files have changed. For example; you might
+
+## CLI Documentation
 
 Tjek helps you understand changed git files.
 
@@ -83,3 +90,19 @@ $ tjek version [OPTIONS]
 **Options**:
 
 * `--help`: Show this message and exit.
+
+## Python Documentation 
+
+The python library exposes a single function that can be used
+to help detect files that have changed. 
+
+```python
+from tjek import find_changed_files
+
+find_changed_files()
+```
+
+This is *super* useful when you're building a static website
+([exibit A](https://calmcode.io)) and you're only interested 
+in building the few markdown files that have changed. This might
+cause a serious speedup!
