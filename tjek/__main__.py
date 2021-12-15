@@ -26,7 +26,7 @@ def ifchanged(files: List[Path] = typer.Argument(..., help="The file to count th
               command: str = typer.Argument(..., help="Command to run if need changes are detected."),
               branch: str = typer.Option("origin/main", help="Branch to compare against."),
               verbose: bool = typer.Option(False, is_flag=True, help="Show extra info.")):
-    """List updated files compared to another branch."""
+    """Run a CLI command if specific files changed."""
     changed_files = [Path(_) for _ in find_changed_files(branch=branch)]
 
     for path in files:

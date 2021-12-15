@@ -4,11 +4,14 @@
 
 > tjek changes with the main branch
 
-| Command | Description |
-| --- | --- |
-| `version` | Shows the version of `tjek` |
-| `diffs` | Show files that differ from the main branch |
-| `ifchanged` | Runs a command if specific files changed |
+This project gives you a minimal method to check which files
+changed in a git project such that you only need to run your
+checks against these files. There's a few use-cases for it: 
+
+- This can help prevent pytest from running every single unit 
+test even if only a few changes have been made.
+- This can be used by static site builders to only build the
+markdown files that are different than the main branch.
 
 ## Install
 
@@ -25,23 +28,23 @@ on which files have changed. For example; you might
 
 Tjek helps you understand changed git files.
 
-**Usage**:
+```
+> tjek --help
 
-```console
-$ tjek [OPTIONS] COMMAND [ARGS]...
+Tjek helps you understand changed git files.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  diffs      List updated files compared to another branch.
+  ifchanged  Run a CLI command if specific files changed.
+  version    Gives the version of the app
 ```
 
-**Options**:
-
-* `--help`: Show this message and exit.
-
-**Commands**:
-
-* `diffs`: List updated files compared to another...
-* `ifchanged`: List updated files compared to another...
-* `version`: Gives the version of the app
-
-## `tjek diffs`
+<details>
+  <summary><code>tjek diffs</code></summary>
+  </br>
 
 List updated files compared to another branch.
 
@@ -56,9 +59,13 @@ $ tjek diffs [OPTIONS]
 * `--branch TEXT`: Branch to compare against.  [default: origin/main]
 * `--help`: Show this message and exit.
 
-## `tjek ifchanged`
+</details>
 
-List updated files compared to another branch.
+<details>
+  <summary><code>tjek ifchanged</code></summary>
+  </br>
+
+Run a CLI command if specific files changed.
 
 **Usage**:
 
@@ -77,7 +84,12 @@ $ tjek ifchanged [OPTIONS] FILES... COMMAND
 * `--verbose / --no-verbose`: Show extra info.  [default: False]
 * `--help`: Show this message and exit.
 
-## `tjek version`
+</details>
+
+
+<details>
+  <summary><code>tjek version</code></summary>
+  </br>
 
 Gives the version of the app
 
@@ -90,6 +102,8 @@ $ tjek version [OPTIONS]
 **Options**:
 
 * `--help`: Show this message and exit.
+
+</details>
 
 ## Python Documentation 
 
