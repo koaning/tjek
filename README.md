@@ -4,6 +4,8 @@
 
 > tjek changes with the main branch
 
+<br>
+
 This project gives you a minimal method to check which files
 changed in a git project such that you only need to run your
 checks against these files. There's a few use-cases for it: 
