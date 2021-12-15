@@ -10,8 +10,9 @@ checks against these files. There's a few use-cases for it:
 
 - This can help prevent pytest from running every single unit 
 test even if only a few changes have been made.
-- This can be used by static site builders to only build the
-markdown files that are different than the main branch.
+- Static site builders could use it to only build the
+markdown files that are different than the main branch. This 
+may seriously reduce the build time locally.
 
 ## Install
 
