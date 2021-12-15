@@ -15,7 +15,6 @@ def version():
     """Gives the version of the app"""
     typer.echo(f"0.1.0")
 
-
 @app.command()
 def diffs(branch: str = typer.Option("origin/main", help="Branch to compare against.")):
     """List updated files compared to another branch."""
