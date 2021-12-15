@@ -14,7 +14,7 @@
 python -m pip install tjek
 ```
 
-## Docs 
+## Documentation
 
 Tjek helps you understand changed git files.
 
