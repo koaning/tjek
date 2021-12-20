@@ -19,7 +19,7 @@ may seriously reduce the build time locally.
 ## Install
 
 ```
-python -m pip install tjek
+pip install https://github.com/user/repo.git@branch
 ```
 
 ## Quickstart 
